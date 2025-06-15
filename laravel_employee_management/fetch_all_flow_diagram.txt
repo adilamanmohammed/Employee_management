@@ -1,0 +1,49 @@
+Fetch All Employees - Visual Flow Diagram
+
++---------------------+
+|  User Interaction   |
+|  (Select Fetch All) |
++----------+----------+
+           |
+           v
++---------------------+
+|  Frontend AJAX Call |
+|  GET /employees/fetch-all-action |
++----------+----------+
+           |
+           v
++---------------------+
+|  Laravel Route      |
+|  routes/web.php     |
+|  Maps URL to Controller |
++----------+----------+
+           |
+           v
++---------------------+
+|  Controller Method  |
+|  EmployeeController::fetchAllAction() |
++----------+----------+
+           |
+           v
++---------------------+
+|  Model Query        |
+|  Employee::all()    |
++----------+----------+
+           |
+           v
++---------------------+
+|  Database           |
+|  employees table    |
++----------+----------+
+           |
+           v
++---------------------+
+|  JSON Response      |
+|  Employee data sent |
++----------+----------+
+           |
+           v
++---------------------+
+|  Frontend UI Update |
+|  Render employee table |
++---------------------+

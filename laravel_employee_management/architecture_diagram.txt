@@ -1,0 +1,26 @@
+Laravel Employee Management Project - Visual Architecture Diagram
+
++---------------------+        +---------------------+        +---------------------+
+|                     |        |                     |        |                     |
+|     Frontend UI     | <----> |    Controller       | <----> |      Model          |
+| (Blade Templates,   |        | (EmployeeController) |        | (Employee Model)     |
+|  jQuery, AJAX)      |        |                     |        |                     |
++---------------------+        +---------------------+        +---------------------+
+          |                             |                             |
+          |                             |                             |
+          v                             v                             v
++---------------------+        +---------------------+        +---------------------+
+|                     |        |                     |        |                     |
+|     Routes          | <----> |  Business Logic     | <----> |  Database           |
+| (web.php)           |        |  & Validation       |        | (employees table)   |
+|                     |        |                     |        |                     |
++---------------------+        +---------------------+        +---------------------+
+
+Description:
+- Frontend UI interacts with users and sends AJAX requests.
+- Routes map URLs to controller methods.
+- Controller handles requests, validates data, and interacts with the model.
+- Model represents the database table and performs ORM operations.
+- Database stores employee data.
+
+This architecture follows the MVC pattern and ensures separation of concerns for maintainability and scalability.
